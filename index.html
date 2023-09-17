@@ -7,9 +7,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome untuk ikon -->
     <title>Portofolio Saya</title>
     <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gaya umum */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Gaya header */
         header {
             background-color: #3498db; /* Latar belakang warna biru */
             color: #fff; /* Warna teks putih */
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Gaya hero section */
+        .hero {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+        }
+
+        .hero p {
+            font-size: 18px;
         }
 
         .cta-button {
@@ -24,6 +66,39 @@
 
         .cta-button:hover {
             background-color: #0079b7; /* Warna neon biru saat hover */
+        }
+
+        /* Gaya section lainnya */
+        section {
+            padding: 50px 0;
+        }
+
+        section h2 {
+            font-size: 28px;
+        }
+
+        section p {
+            font-size: 16px;
+        }
+
+        /* Animasi teks mengetik */
+        .typing-text {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0;
+            letter-spacing: 2px;
+            animation: typing 3s steps(50, end), blink-caret 0.5s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange }
         }
     </style>
 </head>
@@ -42,44 +117,14 @@
         </nav>
         <div class="hero">
             <div class="container">
-                <h1>Selamat datang di Portofolio Saya</h1>
+                <h1><span class="typing-text">Selamat datang di portofolio saya</span><span class="blink">|</span></h1>
                 <p>Saya adalah seorang pengembang web dan juga konten creator.</p>
-                <a href="#portfolio" class="cta-button">Lihat Portofolio</a>
+                <a href="portfolio.html" target="_blank" class="cta-button">Lihat Portofolio</a>
             </div>
         </div>
     </header>
 
-    <section id="about">
-        <div class="container">
-            <h2>Tentang Saya</h2>
-            <p>Selamat datang di portofolio saya. Saya adalah seorang pengembang web dan juga konten creator.</p>
-        </div>
-    </section>
+    <!-- ... (Kode lainnya) ... -->
 
-    <section id="portfolio">
-        <div class="container">
-            <h2>Portofolio</h2>
-            <!-- Daftar proyek Anda di sini -->
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2>Keterampilan</h2>
-            <ul>
-                <li><i class="fas fa-check-circle"></i> HTML</li>
-                <li><i class="fas fa-check-circle"></i> CSS</li>
-                <li><i class="fas fa-check-circle"></i> JavaScript</li>
-                <!-- Tambahkan keterampilan Anda di sini -->
-            </ul>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Kontak</h2>
-            <p>Silakan hubungi saya melalui email di <a href="mailto:email@example.com">email@example.com</a>.</p>
-        </div>
-    </section>
 </body>
 </html>
